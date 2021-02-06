@@ -3,7 +3,7 @@ name: "Daily Health Report"
 on:
   push:
   schedule:
-    - cron: "0 22 * * *"
+    - cron: "0 22,23 * * *"
 
 jobs:
   report:
@@ -19,4 +19,4 @@ jobs:
       - name: Install Requirements
         run: pip install -r requirements.txt
       - name: Report
-        run: chmod 777 ./report.sh && ./report.sh
+        run: bash ./report.sh
