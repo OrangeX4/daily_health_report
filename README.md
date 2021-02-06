@@ -14,12 +14,37 @@
 git clone --bare https://github.com/OrangeX4/daily_health_report.git
 ```
 
-3. Mirror Push 到新 Repo (地址填你新建的 Repo)
+3. 新建 Repo, 注意要选择 Private, 否则你的账号密码将会暴露
+
+4. Mirror Push 到新 Repo (地址填你新建的 Repo)
 
 ```bash
 cd daily_health_report.git
 git push --mirror https://github.com/exampleuser/new-repository.git
 ```
+
+5. 删除本地的 `daily_health_report.git` 文件夹
+
+6. 修改你的新 Repo 里的 `report.sh` 文件的内容
+
+```sh
+#!/bin/bash
+python ./code/main.py \
+--username <username> \
+--password <password> \
+--mail_user <mail_user> \
+--mail_pass <mail_pass> \
+--location 中国江苏省南京市栖霞区仙林大道 \
+--b64 \
+--force \
+--mail_notify
+```
+
+分别填入你的账号, [base64加密](https://base64.us/) 过的密码, 邮箱, [base64加密](https://base64.us/) 过的邮箱密码, 打卡位置.
+
+**注意你填这些参数时不需要尖括号.**
+
+如果你不想要邮箱报告, 可以删除 `--mail_notify` 参数.
 
 ---
 

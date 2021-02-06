@@ -3,7 +3,7 @@ name: "Daily Health Report"
 on:
   push:
   schedule:
-    - cron: "0 22,23 * * *"
+    - cron: "0 22 * * *"
 
 jobs:
   report:
