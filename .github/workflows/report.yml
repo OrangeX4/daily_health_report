@@ -19,4 +19,4 @@ jobs:
       - name: Install Requirements
         run: pip install -r requirements.txt
       - name: Report
-        run: ./report.sh
+        run: chmod 777 ./report.sh && ./report.sh
