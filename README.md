@@ -32,19 +32,18 @@ git push --mirror https://github.com/exampleuser/new-repository.git
 python ./code/main.py \
 --username <username> \
 --password <password> \
---mail_user <mail_user> \
---mail_pass <mail_pass> \
 --location 中国江苏省南京市栖霞区仙林大道 \
 --b64 \
---force \
---mail_notify
+--force
 ```
 
-分别填入你的账号, [base64加密](https://base64.us/) 过的密码, 邮箱, [base64加密](https://base64.us/) 过的邮箱密码, 打卡位置.
+分别填入你的账号, [base64加密](https://base64.us/) 过的密码, 打卡位置.
 
 **注意你填这些参数时不需要尖括号.**
 
-如果你不想要邮箱报告, 可以删除 `--mail_notify` 参数.
+默认设置为每次 push, 还有每天早上 6 点执行一次. 要修改默认设置, 请修改 `.github/workflows/report.yml` 文件.
+
+无论你有没有选邮箱通知, 执行失败时, Github 都会自动发送邮件到你的邮箱.
 
 ---
 
