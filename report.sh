@@ -1,5 +1,5 @@
 #!/bin/bash
-/path/to/your/python /path/to/your/main.py \
+python ./code/main.py \
 --username <username> \
 --password <password> \
 --mail_user <mail_user> \

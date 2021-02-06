@@ -1,3 +1,32 @@
+# 利用 GitHub Action 实现自动打卡
+
+在 [原 Repo](https://github.com/AnnyTerfect/daily_health_report) 里加入了利用 Github Action 来实现自动打卡的功能.
+
+使用 Github Action 不仅不需要额外购买服务器, 而且可以每天定时执行, 你的账号密码也将会保存在私有仓库中, 不用担心泄露的风险.
+
+# 使用
+
+1. 打开终端
+
+2. 对仓库进行 Bare Clone
+
+```bash
+git clone --bare https://github.com/OrangeX4/daily_health_report.git
+```
+
+3. Mirror Push 到新 Repo (地址填你新建的 Repo)
+
+```bash
+cd daily_health_report.git
+git push --mirror https://github.com/exampleuser/new-repository.git
+```
+
+---
+
+# 原 README
+
+---
+
 # 自动每日健康打卡程序
 
 近日对该高校的统一身份认证协议进行了解析，并开发出了基于python的自动健康打卡程序（不熟悉的用户可以使用[旧版](https://github.com/AnnyTerfect/daily_health_attendance/blob/master/README_old.md)）
